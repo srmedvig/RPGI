@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <RadioGroup
+        android:id="@+id/rgEthics"
+        android:layout_width="169dp"
+        android:layout_height="111dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rgMorality"
+        app:layout_constraintEnd_toEndOf="@+id/txtEthics"
+        app:layout_constraintTop_toTopOf="@+id/rgMorality">
+
+        <RadioButton
+            android:id="@+id/btnLawful"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Obey the law always." />
+
+        <RadioButton
+            android:id="@+id/btnNeutral2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Obey the law when it benefits you." />
+
+        <RadioButton
+            android:id="@+id/btnChaotic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Never obey the law." />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgMorality"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAlignment"
+        app:layout_constraintEnd_toStartOf="@+id/rgEthics"
+        app:layout_constraintStart_toStartOf="@+id/txtMorality"
+        app:layout_constraintTop_toTopOf="@+id/txtAlignment">
+
+        <RadioButton
+            android:id="@+id/btnGood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Help others first." />
+
+        <RadioButton
+            android:id="@+id/btnNeutral1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Help yourself first, then others." />
+
+        <RadioButton
+            android:id="@+id/btnEvil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Help only yourself." />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtMorality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="serif"
+        android:text="Morality"
+        android:textColor="@color/BlueGreen"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/rgMorality"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtEthics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="serif"
+        android:text="Ethics"
+        android:textColor="@color/BlueGreen"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/rgEthics"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtAlignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="serif"
+        android:text="Alignment"
+        android:textColor="@color/BlueGreen"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgAlignment"
+        android:layout_width="0dp"
+        android:layout_height="184dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginStart="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/blank" />
+
+    <Button
+        android:id="@+id/btnAlignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="53dp"
+        android:layout_marginStart="47dp"
+        android:background="@color/BlueGreen"
+        android:text="Submit"
+        android:textColor="@color/YellowGreen"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/imgAlignment"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPage3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/BlueGreen"
+        android:text="Next"
+        android:textColor="@color/YellowGreen"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rgEthics"
+        app:layout_constraintTop_toBottomOf="@+id/rgEthics" />
+</android.support.constraint.ConstraintLayout>
