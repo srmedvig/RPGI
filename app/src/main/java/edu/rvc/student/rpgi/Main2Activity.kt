@@ -1,5 +1,6 @@
 package edu.rvc.student.rpgi
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -62,6 +63,17 @@ class Main2Activity : AppCompatActivity() {
                 if (btnNeutral1.isChecked && btnChaotic.isChecked)
                     imgAlignment.setImageResource(R.drawable.morality_chaoticneutral)
             }
+        })
+
+        //send character name to page 3
+
+        var txtName: String = intent.getStringExtra("txtName")
+        val btnPage3 = findViewById<Button>(R.id.btnPage3)
+
+        btnPage3.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, Main3Activity::class.java)
+            intent.putExtra("txtName", txtName)
+            startActivity(intent)
         })
     }
 }

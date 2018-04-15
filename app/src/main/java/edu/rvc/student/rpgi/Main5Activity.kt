@@ -6,20 +6,20 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 
-class Main3Activity : AppCompatActivity() {
+class Main5Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main3)
+        setContentView(R.layout.activity_main5)
 
 
-        //send character name to page 4
+        //send character name to page 6
 
         var txtName: String = intent.getStringExtra("txtName")
-        val btnPage4 = findViewById<Button>(R.id.btnPage4)
+        val btnFinish = findViewById<Button>(R.id.btnFinish)
 
-        btnPage4.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this, Main4Activity::class.java)
+        btnFinish.setOnClickListener(View.OnClickListener {
+            val intent = Intent(this, Main6Activity::class.java)
             intent.putExtra("txtName", txtName)
             startActivity(intent)
         })

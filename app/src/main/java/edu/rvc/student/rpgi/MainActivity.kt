@@ -15,11 +15,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val btnBegin = findViewById<Button>(R.id.btnBegin)
-        val txtName = findViewById<EditText>(R.id.txtName)
+        val txtName = findViewById<EditText>(R.id.txtCharacter)
 
         btnBegin.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, Main2Activity::class.java)
-            intent.putExtra("SendName", txtName.text.toString())
+            intent.putExtra("txtName", txtName.text.toString())
             startActivity(intent)
         })
 

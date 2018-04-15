@@ -15,14 +15,14 @@
         android:layout_marginStart="39dp"
         android:layout_marginTop="27dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/txtName"
+        app:layout_constraintBottom_toTopOf="@+id/txtCharacter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/rpginspiration" />
 
     <EditText
-        android:id="@+id/txtName"
+        android:id="@+id/txtCharacter"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"
@@ -52,5 +52,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCharacter" />
 </android.support.constraint.ConstraintLayout>
