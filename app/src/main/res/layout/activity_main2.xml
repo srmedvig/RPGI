@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Obey the law always." />
+            android:text="Obey the law always" />
 
         <RadioButton
             android:id="@+id/btnNeutral2"
@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Never obey the law." />
+            android:text="Screw the rules" />
     </RadioGroup>
 
     <RadioGroup
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Help only yourself." />
+            android:text="Help only yourself" />
     </RadioGroup>
 
     <TextView

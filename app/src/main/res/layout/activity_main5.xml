@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radioGroup5"
+        android:id="@+id/rgMagic"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="15dp"
@@ -31,7 +31,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btnBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgClass">
+        app:layout_constraintTop_toBottomOf="@+id/imgTactics">
 
         <RadioButton
             android:id="@+id/btnHoly"
@@ -55,25 +55,11 @@
             android:text="Dark / Black Magic" />
 
         <RadioButton
-            android:id="@+id/btnIllusions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Illusions" />
-
-        <RadioButton
             android:id="@+id/btnHealing"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Healing" />
-
-        <RadioButton
-            android:id="@+id/btnAmplify"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Amplifications (more strength, defense, etc)" />
 
         <RadioButton
             android:id="@+id/btnMusic"
@@ -91,7 +77,7 @@
     </RadioGroup>
 
     <ImageView
-        android:id="@+id/imgClass"
+        android:id="@+id/imgTactics"
         android:layout_width="176dp"
         android:layout_height="166dp"
         android:src="@drawable/img_magiccircle"

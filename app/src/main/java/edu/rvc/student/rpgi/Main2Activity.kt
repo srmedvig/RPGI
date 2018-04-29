@@ -1,6 +1,7 @@
 package edu.rvc.student.rpgi
 
 import android.content.Intent
+import android.os.Build.VERSION_CODES.N
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -41,31 +42,51 @@ class Main2Activity : AppCompatActivity() {
         btnAlignment = findViewById(R.id.btnAlignment) as Button
         imgAlignment = findViewById(R.id.imgAlignment) as ImageView
 
+        var alignment = "No selected alignment."
+
         btnAlignment.setOnClickListener(View.OnClickListener {
 
             if (rgMorality.checkedRadioButtonId != -1 && rgEthics.checkedRadioButtonId != -1) {
-                if (btnGood.isChecked && btnLawful.isChecked)
+                if (btnGood.isChecked && btnLawful.isChecked) {
                     imgAlignment.setImageResource(R.drawable.morality_lawfulgood)
-                if (btnGood.isChecked && btnNeutral2.isChecked)
+                    alignment = "Lawful-Good"
+                }
+                if (btnGood.isChecked && btnNeutral2.isChecked) {
                     imgAlignment.setImageResource(R.drawable.morality_neutralgood)
-                if (btnGood.isChecked && btnChaotic.isChecked)
+                    alignment = "Neutral-Good"
+                }
+                if (btnGood.isChecked && btnChaotic.isChecked) {
                     imgAlignment.setImageResource(R.drawable.morality_chaoticgood)
-                if (btnEvil.isChecked && btnLawful.isChecked)
+                    alignment = "Chaotic-Good"
+                }
+                if (btnEvil.isChecked && btnLawful.isChecked) {
                     imgAlignment.setImageResource(R.drawable.morality_lawfulevil)
-                if (btnEvil.isChecked && btnNeutral2.isChecked)
+                    alignment = "Lawful-Evil"
+                }
+                if (btnEvil.isChecked && btnNeutral2.isChecked) {
                     imgAlignment.setImageResource(R.drawable.morality_neutralevil)
-                if (btnEvil.isChecked && btnChaotic.isChecked)
+                    alignment = "Neutral-Evil"
+                }
+                if (btnEvil.isChecked && btnChaotic.isChecked) {
                     imgAlignment.setImageResource(R.drawable.morality_chaoticevil)
-                if (btnNeutral1.isChecked && btnLawful.isChecked)
+                    alignment = "Chaotic-Evil"
+                }
+                if (btnNeutral1.isChecked && btnLawful.isChecked) {
                     imgAlignment.setImageResource(R.drawable.morality_lawfulneutral)
-                if (btnNeutral1.isChecked && btnNeutral2.isChecked)
+                    alignment = "Lawful-Neutral"
+                }
+                if (btnNeutral1.isChecked && btnNeutral2.isChecked) {
                     imgAlignment.setImageResource(R.drawable.morality_neutraltrue)
-                if (btnNeutral1.isChecked && btnChaotic.isChecked)
+                    alignment = "True Neutral"
+                }
+                if (btnNeutral1.isChecked && btnChaotic.isChecked) {
                     imgAlignment.setImageResource(R.drawable.morality_chaoticneutral)
+                    alignment = "Chaotic-Neutral"
+                }
             }
         })
 
-        //send character name to page 3
+        //send info to page 3
 
         var txtName: String = intent.getStringExtra("txtName")
         val btnPage3 = findViewById<Button>(R.id.btnPage3)
@@ -73,6 +94,7 @@ class Main2Activity : AppCompatActivity() {
         btnPage3.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, Main3Activity::class.java)
             intent.putExtra("txtName", txtName)
+            intent.putExtra("alignment", alignment)
             startActivity(intent)
         })
     }

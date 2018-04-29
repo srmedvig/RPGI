@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Heavy Melee (hammer, mace, staff)" />
+            android:text="Heavy Melee (two-handed hammer, staff)" />
 
         <RadioButton
             android:id="@+id/btnRanged"
